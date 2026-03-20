@@ -1,0 +1,78 @@
+<div class="results-container" *ngIf="result">
+    <div class="header">
+        <h1>Вашите политически възгледи</h1>
+        <p class="subtitle">Резултати базирани на вашите отговори</p>
+    </div>
+
+    <div class="results-grid">
+        <!-- Economic Axis Result -->
+        <div class="result-card">
+            <h2>Икономическа ос</h2>
+            <p class="axis-label">Ляво ↔ Дясно</p>
+
+            <div class="result-visual">
+                <div class="spectrum-bar">
+                    <div class="marker" [style.left.%]="getEconomicPosition()"></div>
+                </div>
+                <div class="spectrum-labels">
+                    <span>Ляво</span>
+                    <span>Център</span>
+                    <span>Дясно</span>
+                </div>
+            </div>
+
+            <div class="result-details">
+                <div class="label-badge" [attr.data-position]="result.economicLabel">
+                    {{ result.economicLabel }}
+                </div>
+                <p class="percentage">{{ result.economicPercentage.toFixed(0) }}%</p>
+                <p class="score-detail">Точки: {{ result.economicScore }} / 20</p>
+            </div>
+        </div>
+
+        <!-- Social Axis Result -->
+        <div class="result-card">
+            <h2>Социално-културна ос</h2>
+            <p class="axis-label">Прогресивно ↔ Консервативно</p>
+
+            <div class="result-visual">
+                <div class="spectrum-bar">
+                    <div class="marker" [style.left.%]="getSocialPosition()"></div>
+                </div>
+                <div class="spectrum-labels">
+                    <span>Прогресивно</span>
+                    <span>Умерено</span>
+                    <span>Консервативно</span>
+                </div>
+            </div>
+
+            <div class="result-details">
+                <div class="label-badge" [attr.data-position]="result.socialLabel">
+                    {{ result.socialLabel }}
+                </div>
+                <p class="percentage">{{ result.socialPercentage.toFixed(0) }}%</p>
+                <p class="score-detail">Точки: {{ result.socialScore }} / 20</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="political-compass">
+        <h3>Политически компас</h3>
+        <div class="compass-grid">
+            <div class="compass-labels">
+                <span class="label-top">Консервативно</span>
+                <span class="label-left">Ляво</span>
+                <span class="label-right">Дясно</span>
+                <span class="label-bottom">Прогресивно</span>
+            </div>
+            <div class="compass-marker" [style.left.%]="getEconomicPosition()" [style.top.%]="100 - getSocialPosition()">
+            </div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn btn-primary" (click)="restart()">
+            Започни отначало
+        </button>
+    </div>
+</div>

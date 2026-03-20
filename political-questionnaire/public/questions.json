@@ -1,0 +1,382 @@
+[
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 1,
+        "questionText": "Ролята на държавата в икономиката",
+        "answers": [
+            {
+                "option": "A) Силна намеса",
+                "points": 0
+            },
+            {
+                "option": "B) Умерена намеса",
+                "points": 1
+            },
+            {
+                "option": "C) Минимална намеса",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 2,
+        "questionText": "Данъчна политика",
+        "answers": [
+            {
+                "option": "A) По-високи данъци",
+                "points": 0
+            },
+            {
+                "option": "B) Балансирани",
+                "points": 1
+            },
+            {
+                "option": "C) По-ниски",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 3,
+        "questionText": "Минимална работна заплата",
+        "answers": [
+            {
+                "option": "A) Расте често",
+                "points": 0
+            },
+            {
+                "option": "B) Умерено",
+                "points": 1
+            },
+            {
+                "option": "C) Пазарът определя",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 4,
+        "questionText": "Регулации върху бизнеса",
+        "answers": [
+            {
+                "option": "A) Повече",
+                "points": 0
+            },
+            {
+                "option": "B) Умерени",
+                "points": 1
+            },
+            {
+                "option": "C) По-малко",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 5,
+        "questionText": "Приватизация",
+        "answers": [
+            {
+                "option": "A) Вредна",
+                "points": 0
+            },
+            {
+                "option": "B) Зависи",
+                "points": 1
+            },
+            {
+                "option": "C) Полезна",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 6,
+        "questionText": "Социални помощи",
+        "answers": [
+            {
+                "option": "A) Разширяване",
+                "points": 0
+            },
+            {
+                "option": "B) Запазване",
+                "points": 1
+            },
+            {
+                "option": "C) Ограничаване",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 7,
+        "questionText": "Здравеопазване",
+        "answers": [
+            {
+                "option": "A) Държавно",
+                "points": 0
+            },
+            {
+                "option": "B) Смесено",
+                "points": 1
+            },
+            {
+                "option": "C) Частно",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 8,
+        "questionText": "Пенсионна система",
+        "answers": [
+            {
+                "option": "A) Държавна гаранция",
+                "points": 0
+            },
+            {
+                "option": "B) Смесена",
+                "points": 1
+            },
+            {
+                "option": "C) Частни фондове",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 9,
+        "questionText": "Неравенства",
+        "answers": [
+            {
+                "option": "A) Активно намаляване",
+                "points": 0
+            },
+            {
+                "option": "B) Умерено",
+                "points": 1
+            },
+            {
+                "option": "C) Естествени",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Икономическа ос (Ляво ↔ Дясно)",
+        "questionNumber": 10,
+        "questionText": "Свободна търговия",
+        "answers": [
+            {
+                "option": "A) Ограничаване",
+                "points": 0
+            },
+            {
+                "option": "B) Регулация",
+                "points": 1
+            },
+            {
+                "option": "C) Свободна",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 11,
+        "questionText": "Миграция",
+        "answers": [
+            {
+                "option": "A) Отворена",
+                "points": 0
+            },
+            {
+                "option": "B) Балансирана",
+                "points": 1
+            },
+            {
+                "option": "C) Строга",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 12,
+        "questionText": "Традиционни ценности",
+        "answers": [
+            {
+                "option": "A) Промяна",
+                "points": 0
+            },
+            {
+                "option": "B) Баланс",
+                "points": 1
+            },
+            {
+                "option": "C) Защита",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 13,
+        "questionText": "Религия",
+        "answers": [
+            {
+                "option": "A) Отделена",
+                "points": 0
+            },
+            {
+                "option": "B) Културна роля",
+                "points": 1
+            },
+            {
+                "option": "C) Важна роля",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 14,
+        "questionText": "Права на малцинства",
+        "answers": [
+            {
+                "option": "A) Разширяване",
+                "points": 0
+            },
+            {
+                "option": "B) Гарантиране",
+                "points": 1
+            },
+            {
+                "option": "C) Без разширяване",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 15,
+        "questionText": "Медии",
+        "answers": [
+            {
+                "option": "A) Минимална намеса",
+                "points": 0
+            },
+            {
+                "option": "B) Умерена",
+                "points": 1
+            },
+            {
+                "option": "C) Строг контрол",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 16,
+        "questionText": "Образование",
+        "answers": [
+            {
+                "option": "A) Модерни ценности",
+                "points": 0
+            },
+            {
+                "option": "B) Баланс",
+                "points": 1
+            },
+            {
+                "option": "C) Традиционни модели",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 17,
+        "questionText": "Сигурност",
+        "answers": [
+            {
+                "option": "A) По-малко правомощия",
+                "points": 0
+            },
+            {
+                "option": "B) Умерени",
+                "points": 1
+            },
+            {
+                "option": "C) По-силни",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 18,
+        "questionText": "ЛГБТ+ права",
+        "answers": [
+            {
+                "option": "A) Разширяване",
+                "points": 0
+            },
+            {
+                "option": "B) Запазване",
+                "points": 1
+            },
+            {
+                "option": "C) Ограничаване",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 19,
+        "questionText": "Екология",
+        "answers": [
+            {
+                "option": "A) Строги мерки",
+                "points": 0
+            },
+            {
+                "option": "B) Баланс",
+                "points": 1
+            },
+            {
+                "option": "C) Икономика първо",
+                "points": 2
+            }
+        ]
+    },
+    {
+        "section": "Социално-културна ос (Прогресивно ↔ Консервативно)",
+        "questionNumber": 20,
+        "questionText": "Личен живот",
+        "answers": [
+            {
+                "option": "A) Минимална намеса",
+                "points": 0
+            },
+            {
+                "option": "B) Умерена",
+                "points": 1
+            },
+            {
+                "option": "C) По-голяма намеса",
+                "points": 2
+            }
+        ]
+    }
+]
