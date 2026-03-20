@@ -13,7 +13,7 @@ export class QuestionService {
     constructor(private http: HttpClient) { }
 
     getQuestions(): Observable<Question[]> {
-        return this.http.get<Question[]>('/questions.json');
+        return this.http.get<Question[]>('questions.json');
     }
 
     saveAnswer(answer: UserAnswer): void {
