@@ -6,7 +6,7 @@
       "type": "msedge",
       "request": "launch",
       "url": "http://localhost:4200",
-      "webRoot": "${workspaceFolder}/political-questionnaire/src",
+      "webRoot": "${workspaceFolder}/political-views/src",
       "preLaunchTask": "ng serve"
     }
   ]

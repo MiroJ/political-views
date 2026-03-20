@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "political-questionnaire": {
+    "political-views": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "political-questionnaire:build:production"
+              "buildTarget": "political-views:build:production"
             },
             "development": {
-              "buildTarget": "political-questionnaire:build:development"
+              "buildTarget": "political-views:build:development"
             }
           },
           "defaultConfiguration": "development"

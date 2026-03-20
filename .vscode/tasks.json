@@ -7,7 +7,7 @@
       "script": "start",
       "isBackground": true,
       "options": {
-        "cwd": "${workspaceFolder}/political-questionnaire"
+        "cwd": "${workspaceFolder}/political-views"
       },
       "problemMatcher": {
         "owner": "typescript",
