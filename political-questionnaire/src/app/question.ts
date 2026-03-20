@@ -66,9 +66,9 @@ export class QuestionService {
     }
 
     private getSocialLabel(percentage: number): string {
-        if (percentage < 33) return 'Прогресивно';
+        if (percentage < 33) return 'Консервативно';
         if (percentage < 67) return 'Умерено';
-        return 'Консервативно';
+        return 'Прогресивно';
     }
 
     resetAnswers(): void {

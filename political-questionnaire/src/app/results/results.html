@@ -40,9 +40,9 @@
                     <div class="marker" [style.left.%]="getSocialPosition()"></div>
                 </div>
                 <div class="spectrum-labels">
-                    <span>Прогресивно</span>
-                    <span>Умерено</span>
                     <span>Консервативно</span>
+                    <span>Умерено</span>
+                    <span>Прогресивно</span>
                 </div>
             </div>
 
@@ -60,12 +60,21 @@
         <h3>Политически компас</h3>
         <div class="compass-grid">
             <div class="compass-labels">
-                <span class="label-top">Консервативно</span>
-                <span class="label-left">Ляво</span>
-                <span class="label-right">Дясно</span>
-                <span class="label-bottom">Прогресивно</span>
+                <span class="label label-top">Прогресивно</span>
+                <span class="label label-left">Ляво</span>
+                <span class="label label-right">Дясно</span>
+                <span class="label label-bottom">Консервативно</span>
             </div>
-            <div class="compass-marker" [style.left.%]="getEconomicPosition()" [style.top.%]="100 - getSocialPosition()">
+            <div class="party-marker"
+                 *ngFor="let party of parties"
+                 [style.left.%]="(party.x / 20) * 100"
+                 [style.top.%]="(party.y / 20) * 100"
+                 [style.backgroundColor]="party.color"
+            >
+                <span class="party-label" [style.backgroundColor]="party.color">{{ party.name }}</span>
+            </div>
+            <div class="compass-marker" [style.left.%]="getEconomicPosition()" [style.top.%]="getSocialPosition()">
+                <span class="party-label">Вие</span>
             </div>
         </div>
     </div>
