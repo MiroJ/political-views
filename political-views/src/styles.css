@@ -27,12 +27,33 @@ body {
     margin-bottom: 20px;
 }
 
-/* ── Home ── */
-.home-container {
-    max-width: 700px;
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
+.container .header {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container .header h1 {
+    margin-bottom: 20px;
+}
+
+.container .header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ── Home ── */
 
 .home-card {
     background: white;
@@ -133,26 +154,6 @@ body {
 }
 
 /* ── Questionnaire ── */
-.questionnaire-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.questionnaire-container .header {
-    color: white;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.questionnaire-container .header h1 {
-    margin-bottom: 20px;
-}
-
-.questionnaire-container .header h1 a {
-    color: inherit;
-    text-decoration: none;
-}
 
 .progress-bar {
     width: 100%;
@@ -226,26 +227,7 @@ body {
 }
 
 /* ── Results ── */
-.results-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-.results-container .header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.results-container .header h1 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 16px;
-}
 
 .results-grid {
     display: grid;
@@ -503,4 +485,88 @@ body {
 .actions .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 8px 8px 20px 8px;
+    }
+
+    .container .header {
+        margin-bottom: 20px;
+    }
+
+    .container .header h1 {
+        font-size: 26px;
+    }
+
+    /* Home */
+
+    .home-card {
+        padding: 20px 16px;
+    }
+
+    .home-header {
+        margin-bottom: 20px;
+    }
+
+    .home-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-section {
+        margin-bottom: 18px;
+    }
+
+    /* Questionnaire */
+
+    .question-section {
+        padding: 16px 14px;
+        margin-bottom: 16px;
+    }
+
+    .question-section h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .answer-option {
+        padding: 14px 12px;
+    }
+
+    .navigation .btn {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    /* Results */
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .result-card {
+        padding: 18px 14px;
+    }
+
+    .political-compass {
+        padding: 16px 12px;
+        margin-bottom: 16px;
+    }
+
+    .compass-grid {
+        height: 280px;
+    }
+
+    .actions .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
 }
