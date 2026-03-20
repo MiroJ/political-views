@@ -478,7 +478,7 @@ body {
     border-radius: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    z-index: 20;
 }
 
 .compass-marker>Span {
@@ -486,6 +486,7 @@ body {
     bottom: 27px;
 }
 
+.compass-marker:hover,
 .compass-marker:hover>Span {
     opacity: 0.5;
 }
