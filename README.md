@@ -105,6 +105,19 @@ ng build
 
 Build артефактите ще се създадат в `dist/` директорията.
 
-## Допълнителна информация
+## Публикуване (Build and Publish)
 
-За повече информация относно Angular CLI използвайте `ng help` или посетете [Angular CLI Documentation](https://angular.dev/tools/cli).
+Преди да започнете с публикуването, уверете се че имате `angular-cli-ghpages` NPM пакет инсталиран
+на компютъра в глобалния NPM кеш. Ако го нямате, изпълнете
+
+    npm install -g angular-cli-ghpages
+
+За да публикувате този проект в GitHub Pages, изпълнете следните команди:
+
+    cd .\political-questionnaire\
+    ng build  --base-href https://github.com/MiroJ/political-views/
+    npx angular-cli-ghpages --dir=dist/political-questionnaire/browser
+
+След няколко секунди, апликацията трябва да е инсталирана на https://miroj.github.io/political-views/.
+
+Успех!
