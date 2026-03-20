@@ -1,12 +1,13 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { QuestionService } from '../question';
 import { Question as QuestionModel, UserAnswer } from '../models';
 
 @Component({
     selector: 'app-questionnaire',
-    imports: [CommonModule],
+    imports: [CommonModule, RouterLink],
     templateUrl: './questionnaire.html',
 })
 export class Questionnaire implements OnInit {
