@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
-import { QuestionService } from '../question';
+import { QuestionService } from '../question-service';
 import { Question as QuestionModel, UserAnswer } from '../models';
 
 @Component({
