@@ -7,15 +7,19 @@
         <p class="progress-text">Въпрос {{ currentQuestionIndex + 1 }} от {{ questions.length }}</p>
     </div>
 
-    <div class="question-section" *ngIf="currentQuestion">
+    @if (currentQuestion) {
+    <div class="question-section">
         <h2>{{ currentQuestion.questionText }}</h2>
 
         <div class="answers">
-            <div class="answer-option" *ngFor="let answer of currentQuestion.answers; let i = index" [class.selected]="selectedAnswerIndex === i" (click)="selectAnswer(i)">
+            @for (answer of currentQuestion.answers; track answer; let i = $index) {
+            <div class="answer-option" [class.selected]="selectedAnswerIndex === i" (click)="selectAnswer(i)">
                 {{ answer.option }}
             </div>
+            }
         </div>
     </div>
+    }
 
     <div class="navigation">
         <button class="btn btn-secondary" (click)="previousQuestion()" [disabled]="currentQuestionIndex === 0">

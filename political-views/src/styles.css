@@ -12,11 +12,6 @@ body {
     padding: 20px;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 .header {
     color: white;
     text-align: center;
@@ -254,6 +249,7 @@ body {
     color: #7f8c8d;
     font-size: 14px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .result-visual {

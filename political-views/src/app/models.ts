@@ -23,6 +23,13 @@ export interface Result {
     socialScore: number;
     socialPercentage: number;
     socialLabel: string;
-    totalEconomicQuestions: number;
-    totalSocialQuestions: number;
+    economicQuestionsTotal: number;
+    socialQuestionsTotal: number;
+}
+
+export interface PartyPosition { 
+    name: string; 
+    x: number; 
+    y: number; 
+    color: string;
 }
