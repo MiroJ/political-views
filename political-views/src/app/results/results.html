@@ -25,8 +25,10 @@
                 <div class="label-badge" [attr.data-position]="result.economicLabel">
                     {{ result.economicLabel }}
                 </div>
+                @if (result.economicScore >= 0) {
                 <p class="percentage">{{ result.economicPercentage.toFixed(0) }}%</p>
-                <p class="score-detail">Точки: {{ result.economicScore }} / 20</p>
+                <p class="score-detail">Точки: {{ result.economicScore }} / {{ result.totalEconomicQuestions * 2 }}</p>
+                }
             </div>
         </div>
 
@@ -50,8 +52,10 @@
                 <div class="label-badge" [attr.data-position]="result.socialLabel">
                     {{ result.socialLabel }}
                 </div>
+                @if (result.socialScore >= 0) {
                 <p class="percentage">{{ result.socialPercentage.toFixed(0) }}%</p>
-                <p class="score-detail">Точки: {{ result.socialScore }} / 20</p>
+                <p class="score-detail">Точки: {{ result.socialScore }} / {{ result.totalSocialQuestions * 2 }}</p>
+                }
             </div>
         </div>
     </div>
@@ -65,38 +69,19 @@
                 <span class="label label-right">Дясно</span>
                 <span class="label label-bottom">Консервативно</span>
             </div>
-            <div class="party-marker"
-                 *ngFor="let party of parties"
-                 [style.left.%]="(party.x / 20) * 100"
-                 [style.top.%]="(party.y / 20) * 100"
-                 [style.backgroundColor]="party.color"
-            >
+            <div class="party-marker" *ngFor="let party of parties" [style.left.%]="(party.x / (result.totalEconomicQuestions + result.totalSocialQuestions)) * 100" [style.top.%]="(party.y / (result.totalEconomicQuestions + result.totalSocialQuestions)) * 100" [style.backgroundColor]="party.color">
                 <span class="party-label" [style.backgroundColor]="party.color">{{ party.name }}</span>
             </div>
-            <div class="compass-marker" [style.left.%]="getEconomicPosition()" [style.top.%]="getSocialPosition()">
+            @if (result.socialScore >= 0) {
+            <div class="compass-marker" [style.left.%]="getEconomicPosition()" [style.top.%]="100 - getSocialPosition()">
                 <span class="party-label">Вие</span>
             </div>
+            }
         </div>
     </div>
 
-    <div class="disclaimer-box">
-        <strong>⚠️ Важна бележки:</strong>
-        <p>
-            - Вашите отговори <strong>не се записват</strong> никъде и не се използват за никакви цели извън
-            показването на резултатите в края на въпросника. Вашата поверителност е напълно
-            защитена и остава в браузера ви, докато не го затворите или не натиснете Refresh.
-        </p>
-        <p>
-            - Този въпросник е създаден с образователна цел и не е предназначен да бъде
-            научно изследване или инструмент за политическа диагностика.
-        </p>
-        <p>
-            - Резултатите от този въпросник <strong>не са статистически представителни</strong>
-            и не претендират за научна точност. Те са единствено ориентировъчни и служат само за информация и
-            самопознание. Не разчитайте на тях при вземане на политически решения.
-        </p>
-    </div>
-    
+    <app-disclaimer />
+
     <div class="actions">
         <button class="btn btn-primary" (click)="restart()">
             Започни отначало

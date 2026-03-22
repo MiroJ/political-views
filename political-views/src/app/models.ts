@@ -23,4 +23,6 @@ export interface Result {
     socialScore: number;
     socialPercentage: number;
     socialLabel: string;
+    totalEconomicQuestions: number;
+    totalSocialQuestions: number;
 }

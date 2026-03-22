@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { QuestionService } from '../question-service';
 import { Result } from '../models';
+import { Disclaimer } from '../disclaimer/disclaimer';
 
 @Component({
     selector: 'app-results',
-    imports: [CommonModule],
+    imports: [CommonModule, Disclaimer],
     templateUrl: './results.html',
 })
 export class Results implements OnInit {
@@ -42,6 +43,6 @@ export class Results implements OnInit {
     }
 
     getSocialPosition(): number {
-        return this.result ? 100 - this.result.socialPercentage : 50;
+        return this.result ? this.result.socialPercentage : 50;
     }
 }

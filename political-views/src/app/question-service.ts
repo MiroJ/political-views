@@ -1,19 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, tap } from 'rxjs';
 import { Question, UserAnswer, Result } from './models';
 
 @Injectable({
     providedIn: 'root',
 })
 export class QuestionService {
+    private questions: Question[] = [];
     private answersSubject = new BehaviorSubject<UserAnswer[]>([]);
     public answers$ = this.answersSubject.asObservable();
 
     constructor(private http: HttpClient) { }
 
     getQuestions(): Observable<Question[]> {
-        return this.http.get<Question[]>('questions.json');
+        if (this.questions.length > 0) {
+            return new Observable(observer => {
+                observer.next(this.questions);
+                observer.complete();
+            });
+        } else {
+            return this.http.get<Question[]>('questions.json').pipe(
+                tap(questions => this.questions = questions)
+            );
+        }
     }
 
     saveAnswer(answer: UserAnswer): void {
@@ -32,6 +42,19 @@ export class QuestionService {
     }
 
     calculateResults(): Result {
+        if (this.answersSubject.value.length === 0) {
+            return {
+                economicScore: -1,
+                economicPercentage: 0,
+                economicLabel: 'Няма отговори',
+                socialScore: -1,
+                socialPercentage: 0,
+                socialLabel: 'Няма отговори',
+                totalEconomicQuestions: 0,
+                totalSocialQuestions: 0
+            };
+        }
+
         const answers = this.answersSubject.value;
 
         const economicSection = 'Икономическа ос (Ляво ↔ Дясно)';
@@ -43,8 +66,8 @@ export class QuestionService {
         const economicScore = economicAnswers.reduce((sum, a) => sum + a.points, 0);
         const socialScore = socialAnswers.reduce((sum, a) => sum + a.points, 0);
 
-        const economicMax = 20; // 10 questions * 2 max points
-        const socialMax = 20; // 10 questions * 2 max points
+        const economicMax = economicAnswers.length * 2; // questions * 2 max points
+        const socialMax = socialAnswers.length * 2; // questions * 2 max points
 
         const economicPercentage = (economicScore / economicMax) * 100;
         const socialPercentage = (socialScore / socialMax) * 100;
@@ -55,7 +78,9 @@ export class QuestionService {
             economicLabel: this.getEconomicLabel(economicPercentage),
             socialScore,
             socialPercentage,
-            socialLabel: this.getSocialLabel(socialPercentage)
+            socialLabel: this.getSocialLabel(socialPercentage),
+            totalEconomicQuestions: economicAnswers.length,
+            totalSocialQuestions: socialAnswers.length,
         };
     }
 
