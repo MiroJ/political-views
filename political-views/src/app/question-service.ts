@@ -34,7 +34,7 @@ export class QuestionService {
             { name: 'ДПС-НН', x: 13, y: 12, color: '#2e7d32' },
             { name: 'Възраждане', x: 7, y: 18, color: '#4a148c' },
             { name: 'ИТН', x: 10, y: 12, color: '#7b1fa2' },
-            { name: 'Български възход', x: 8, y: 11, color: '#bf360c' },
+            { name: 'Прогресивна България', x: 8, y: 11, color: '#bf360c' },
             { name: 'Зелени', x: 6, y: 4, color: '#1b5e20' },
         ];
     }
@@ -76,7 +76,7 @@ export class QuestionService {
         const economicMax = economicAnswers.length * 2; // questions * 2 max points
         const economicPercentage = (economicScore / economicMax) * 100;
         
-        const socialSection = 'Социално-културна ос (Прогресивно ↔ Консервативно)';
+        const socialSection = 'Социално-културна ос (Либерално ↔ Консервативно)';
         const socialAnswers = answers.filter(a => a.section === socialSection);
         const socialScore = socialAnswers.reduce((sum, a) => sum + a.points, 0);
         const socialMax = socialAnswers.length * 2; // questions * 2 max points
@@ -103,7 +103,7 @@ export class QuestionService {
     private getSocialLabel(percentage: number): string {
         if (percentage < 33) return 'Консервативно';
         if (percentage < 67) return 'Умерено';
-        return 'Прогресивно';
+        return 'Либерално';
     }
 
     resetAnswers(): void {
